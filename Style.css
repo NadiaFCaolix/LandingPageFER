@@ -1,0 +1,1320 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+:root {
+  --primary: #01B1C0;
+  --primary-dark: #00695C;
+  --bg-soft: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #4b5563;
+  --radius: 1.5rem;
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bloque,
+.rendiciones-boxes,
+.confian-box,
+.stats-container,
+.clients-section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ===== MEJORA VISUAL GLOBAL ===== */
+
+section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Suaviza todas las cards del sitio */
+.bloque,
+.rendiciones-boxes,
+.confian-box,
+.stats-container {
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+
+/* NAVBAR*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00695C;
+}
+
+/* BOTONES MODERNOS */
+.btn-login,
+.btn-contact {
+  background: #00695C;
+  color: #fff;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-login:hover,
+.btn-contact:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+
+.hamburger {
+    display: none;
+    border: 1px solid #C3C3C3;
+    border-radius: 0.3rem;
+    padding: 0.6rem 0.6rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+}
+
+/* MENU MOBILE*/
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    z-index: 30;
+}
+
+.mobile-menu a { text-decoration: none; color: #333; }
+.mobile-menu.active { display: flex; }
+
+/* QUERY MENU */
+@media (max-width: 768px) {
+    .nav-links, .btn-login { display: none; }
+    .hamburger { display: block; }
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-image: url('Img/fondocontextura.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+
+@media (min-width: 768px) {
+    .hero { flex-direction: row; align-items: center; justify-content: space-between; gap: 3rem; }
+}
+
+.hero-text { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem; max-width: 36rem; }
+.hero-subtitle { text-transform: uppercase; color: white; letter-spacing: 1px; font-weight: 500; }
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    min-width: 350px;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.btn-contact { background-color: #000; color: #fff; padding: 0.4rem 0.8rem; border-radius: 0.3rem; width: 190px; height: 45px; border: none; cursor: pointer; transition: background-color 0.3s ease; font-size: 0.85rem; display: inline-block; margin-top: 25px; }
+.btn-contact:hover { background-color: #333; }
+
+.hero-image-wrapper { position: relative; display: flex; justify-content: center; max-height: 1500px; max-width: 100%; right: 45px; }
+.hero-overlay { position: absolute; width: 100px; opacity: 0; transform: translateY(20px); }
+
+/* Posicion de gastos en el celular */
+.gasto1 { top: 25%; left: 15%; width: 25rem; }
+.gasto2 { top: 45%; right: 18%; width: 25rem; }
+.gasto3 { top: 65%; left: 15%; width: 25rem; }
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 1.8rem; }
+    .btn-contact { width: 100%; }
+    .gasto1, .gasto2, .gasto3 { width: 12rem; }
+}
+
+
+/* SECCION 2 - COMO LO HACEMOS */
+.features-section {
+ position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 1000px;
+background-color: #f1f5f9;
+border-radius: 1.5rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    margin: auto;
+    /* background-image: url('Img/fondotextura.jpg');
+    background-image: url('Img/fondotextura1.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;  */
+}
+
+.features-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.feature-item {
+  position: absolute; /* superpuestos (desktop) */
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.feature-img {
+  max-width: 320px;
+  margin-bottom: 2rem;
+}
+
+.img-comolohacemos {
+  width: 7rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.feature-text {
+  max-width: 400px;
+}
+
+.feature-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Dots */
+.features-dots {
+  position: absolute;
+  top: 50%;
+  right: 2rem; /* separación desde el borde */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column; /* en columna */
+  gap: 1rem; /* espacio entre dots */
+}
+
+.features-dots .dot {
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.features-dots .dot.active {
+  background: #54c9d6;
+  transform: scale(1.2); /* un poco más grande cuando está activo */
+}
+/* Desktop layout */
+@media (min-width: 968px) {
+  .feature-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  .feature-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .feature-img {
+    flex: 1;
+    max-width: 60%;
+  }
+  .feature-text {
+    flex: 1;
+    padding: 0 2rem;
+  }
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .features-section {
+    height: auto; /* deja que crezca con el contenido */
+    padding: 2rem 1rem;
+  }
+  .feature-item {
+    position: relative; /* flujo normal */
+    opacity: 1 !important; /* siempre visibles */
+    transform: none !important;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .feature-img {
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+  }
+  .feature-text {
+    max-width: 100%;
+  }
+  .features-dots {
+    display: none; /* dots opcionales en mobile */
+  }
+  .feature-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* SECCION BENEFICIOS - CONTADOR*/
+.stats-section { padding: 3rem 1rem; }
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #01B1C0, #54c9d6);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(1,177,192,0.3);
+  transition: all 0.8s ease;
+}
+
+
+.stat-item .stat-number { font-size: 2.5rem; font-weight: bold; color: #ffffff; }
+.stat-item .stat-text { margin-top: 0.5rem; color: #ffffff; font-size: 1rem; }
+
+@media (min-width: 768px) { .stats-container { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .stat-item .stat-number { font-size: 1.8rem; } .stat-item .stat-text { font-size: 0.9rem; } }
+
+.stats-container.show { opacity: 1; transform: translateY(0); }
+
+.hide-on-desktop { display: none; }
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    align-items: center;
+  }
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #000, #01B1C0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+  .btn-contact {
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+
+  .hero-image-wrapper {
+    right: 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* MOBILE */
+  .features-section {
+  position: relative;
+  width: 90%;             
+  max-width: 1100px;      
+  height: 80vh;           
+  margin: 4rem auto;    
+  border-radius: 1rem;   
+  background: #f1f5f9;   
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  overflow-y: auto;      
+  overflow-x: hidden;
+
+  padding: 3rem 2rem;
+}
+
+  .features-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .feature-item {
+    position: relative;  
+    inset: unset;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .feature-item img {
+    max-width: 80%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .feature-text {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  .img-comolohacemos{
+    max-width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-text {
+    font-size: 0.9rem;
+  }
+}
+.features-dots {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.features-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.features-dots .dot.active {
+  background: #54c9d6;
+}
+
+/* SECCION 4 - PORQUE ELEGIRNOS */
+
+.elegirnos-section {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.elegirnos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.elegirnos-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); 
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.elegirnos-header h3 {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.elegirnos-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1.5rem; 
+  flex-wrap: wrap;
+}
+
+.bloques-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+  flex: 1;
+}
+
+.bloque {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.bloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.bloque-horizontal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0; 
+  padding: 0; 
+}
+
+.bloque-horizontal .texto {
+  flex: 1;
+  padding: 1.5rem; /* Padding solo en el texto para espaciado interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinea el texto al fondo para matching con imagen */
+}
+
+.bloque-horizontal .imagen {
+  flex: 1;
+  display: flex;
+  padding: 0; /* Sin padding para pegado al borde */
+  margin: 0; /* Sin margen extra */
+  min-width: 180px; /* Ancho mínimo para la imagen */
+}
+
+.bloque-horizontal .imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 180px; /* Tamaño máximo controlado */
+  border-radius: 0; /* Sin border-radius en la img para pegado completo al borde del bloque */
+  object-fit: contain;
+  align-self: flex-end; /* Asegura que la imagen esté al fondo del contenedor imagen */
+}
+
+/* Para bloque1: Imagen pegada al borde derecho */
+.bloque1 .imagen {
+  justify-content: flex-end;
+}
+
+/* Para bloque2: Imagen pegada al borde izquierdo (con row-reverse) */
+.bloque2 {
+  flex-direction: row-reverse;
+}
+
+.bloque2 .imagen {
+  justify-content: flex-start !important; /* Pegado al izquierdo */
+}
+
+.img2 img,
+.img3 img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+}
+
+.bloque-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 280px; /* Ligeramente más ancho para mejor legibilidad */
+  height: auto;
+  align-self: stretch;
+  padding: 0; /* Padding cero para permitir pegado */
+}
+
+.bloque-vertical .texto {
+  flex: 1;
+  padding: 1.5rem; /* Padding solo en texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bloque h2 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* Responsivo para títulos de bloques */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-left: 0; /* Removido margin-left fijo para centrar en vertical */
+  text-align: left; /* Mantiene alineación izquierda en horizontal, pero se ajustará */
+  width: 100%;
+}
+
+.bloque h5 {
+  font-weight: 400;
+  font-size: clamp(0.85rem, 2vw, 1rem); /* Responsivo para textos */
+  color: #555;
+  line-height: 1.5; /* Aumentado para mejor legibilidad */
+  margin: 0 0 0.5rem 0; /* Margen consistente, reducido para más espacio */
+  text-align: left;
+}
+
+.bloque-vertical .texto {
+  text-align: center; /* Centrado específico para vertical */
+}
+
+.bloque-vertical h2,
+.bloque-vertical h5 {
+  text-align: center;
+}
+
+.bloque-vertical .imagen {
+  display: flex;
+  justify-content: flex-end; /* Pegada al borde derecho (cambio clave para desktop) */
+  align-items: flex-end; /* Pegada al borde inferior */
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0; /* Evita que se comprima */
+}
+
+.bloque-vertical .imagen img {
+  max-width: 200px; /* Imagen más grande en vertical para desktop */
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* Sin radio para pegado */
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablet: 768px - 1199px */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .elegirnos-section {
+    padding: 3rem 1rem;
+    max-width: 100%;
+  }
+
+  .elegirnos-container {
+    gap: 1rem;
+    flex-direction: row; /* Mantiene row pero ajusta */
+  }
+
+  .bloques-izquierda {
+    flex: 1;
+    gap: 1rem;
+  }
+
+  .bloque-vertical {
+    width: 250px;
+  }
+
+  .bloque-horizontal .imagen,
+  .bloque-vertical .imagen {
+    min-width: 140px;
+  }
+
+  .bloque-horizontal .imagen img,
+  .bloque-vertical .imagen img,
+  .img2 img,
+  .img3 img {
+    max-width: 140px;
+  }
+
+  .bloque-horizontal .texto,
+  .bloque-vertical .texto {
+    padding: 1.2rem;
+  }
+
+  .bloque h2 {
+    font-size: 1.2rem;
+  }
+
+  .bloque h5 {
+    font-size: 0.9rem;
+  }
+
+  /* En tablet, mantiene la imagen pegada al derecho inferior para consistencia */
+  .bloque-vertical .imagen {
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile Grande: 481px - 767px */
+@media (max-width: 767px) and (min-width: 481px) {
+  .elegirnos-section {
+    padding: 2.5rem 0.5rem;
+  }
+
+  .elegirnos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Aumentado para más separación entre boxes en mobile */
+  }
+
+  .bloques-izquierda {
+    width: 100%;
+    gap: 2rem; /* Aumentado para separar mejor bloque1 y bloque2 */
+  }
+
+  .bloque-horizontal {
+    flex-direction: column !important; /* Fuerza columna vertical */
+    align-items: center;
+    text-align: center;
+    gap: 0; /* Sin gap entre texto e imagen para fluidez */
+    padding: 0;
+  }
+
+  .bloque-horizontal .texto {
+    padding: 1.5rem;
+    padding-bottom: 1rem; /* Padding inferior aumentado para espacio antes de imagen */
+    order: 1; /* Texto arriba */
+    flex: none;
+    width: 100%;
+  }
+
+  .bloque-horizontal .imagen {
+    justify-content: center; /* Centrada horizontalmente en mobile */
+    align-items: flex-end; /* Pegada al borde inferior del bloque */
+    flex: none;
+    order: 2; /* Imagen abajo */
+    width: 100%;
+    min-width: auto;
+    padding: 0;
+    margin: 0 0 0 0; /* Sin margen extra */
+    margin-top: 0.5rem; /* Espacio adicional entre texto e imagen para no quedar "juntos" */
+  }
+
+  .bloque-horizontal .imagen img {
+    max-width: 150px;
+    width: auto; /* Permite auto para centrado natural */
+  }
+
+  /* Para bloque2, fuerza columna y orden consistente */
+  .bloque2 {
+    flex-direction: column !important;
+  }
+
+  .bloque2 .texto {
+    order: 1;
+  }
+
+  .bloque2 .imagen {
+    order: 2;
+    justify-content: center;
+    margin-top: 0.5rem; /* Espacio consistente */
+  }
+
+  .bloque-vertical {
+    width: 100%;
+    max-width: 400px; /* Limita ancho en mobile grande */
+    align-self: center;
+    flex-direction: column;
+    /* En mobile, la box se pone debajo de las otras dos, ya que container es column */
+  }
+
+  .bloque-vertical .texto {
+    padding: 1.5rem;
+    padding-bottom: 1rem; /* Espacio antes de imagen */
+  }
+
+  .bloque-vertical .imagen {
+    width: 100%;
+    justify-content: center; /* Centrada horizontal en mobile para usabilidad (cambio de desktop) */
+    align-items: flex-end; /* Pegada al inferior */
+    margin-top: 0.5rem; /* Espacio entre texto e imagen */
+  }
+
+  .bloque-vertical .imagen img {
+    max-width: 160px;
+    width: auto;
+  }
+
+  .bloque h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .bloque h5 {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.6; /* Aumentado para mejor legibilidad en mobile */
+  }
+}
+
+/* Mobile Pequeño: hasta 480px */
+@media (max-width: 480px) {
+  .elegirnos-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .elegirnos-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .elegirnos-header h3 {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .elegirnos-container {
+    gap: 1.5rem; /* Aumentado ligeramente para separación en mobile pequeño */
+  }
+
+  .bloques-izquierda {
+    gap: 1.5rem; /* Separación entre boxes */
+  }
+
+  .bloque {
+    border-radius: 12px; /* Bordes más suaves en mobile */
+  }
+
+  .bloque-horizontal,
+  .bloque-vertical {
+    padding: 0;
+  }
+
+  .bloque-horizontal .texto,
+  .bloque-vertical .texto {
+    padding: 1.2rem;
+    padding-bottom: 0.8rem; /* Espacio antes de imagen */
+  }
+
+  .bloque-horizontal .imagen,
+  .bloque-vertical .imagen {
+    padding: 0;
+    margin: 0;
+    margin-top: 0.8rem; /* Más espacio entre texto e imagen en mobile pequeño para no quedar juntos */
+    justify-content: center; /* Asegura centrado en mobile pequeño para bloque-vertical */
+  }
+
+  .bloque-horizontal .imagen img,
+  .bloque-vertical .imagen img {
+    max-width: 120px; /* Imágenes más pequeñas en mobile pequeño */
+    width: auto;
+  }
+
+  .bloque h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bloque h5 {
+    font-size: 0.85rem;
+    line-height: 1.5; /* Ajustado para mobile pequeño */
+    padding: 0 0.5rem;
+  }
+
+  .bloque-vertical .imagen {
+    margin-top: 0.8rem; /* Espacio consistente */
+  }
+}
+
+/* Ajustes generales para pantallas muy anchas (opcional, >1200px) */
+@media (min-width: 1200px) {
+  .elegirnos-container {
+    gap: 2rem;
+  }
+
+  .bloque-vertical {
+    width: 300px;
+  }
+
+  .bloque-horizontal .imagen,
+  .bloque-vertical .imagen {
+    min-width: 200px;
+  }
+
+  .bloque-horizontal .imagen img,
+  .bloque-vertical .imagen img,
+  .img2 img,
+  .img3 img {
+    max-width: 200px;
+  }
+
+  .bloque-horizontal .texto,
+  .bloque-vertical .texto {
+    padding: 1.8rem;
+  }
+
+  /* En desktop grande, mantiene pegado al derecho inferior */
+  .bloque-vertical .imagen {
+    justify-content: flex-end;
+  }
+}
+
+
+/* SECCION 5 RENDICIONES */
+
+.rendiciones-section {
+  background: #f9fafb; 
+}
+
+.rendiciones-section img {
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.rendiciones-section img:hover {
+  transform: scale(1.05);
+}
+
+
+.rendiciones-section {
+  background: #f9fafb;
+  padding: 4rem 1.5rem;
+}
+
+.rendiciones-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.rendiciones-section p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.rendiciones-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; 
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .rendiciones-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rendiciones-box {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rendiciones-box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rendiciones-box-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.rendiciones-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.rendiciones-box p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* SECCION 6 - CONFIAN EN NOSOTROS  */
+
+
+.confian-section {
+  background: #fff;
+}
+
+.confian-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.confian-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+.confian-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.confian-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.confian-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.confian-box {
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confian-box:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12); 
+}
+
+.confian-wide {
+  grid-column: span 2;
+}
+
+.confian-tall {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #01B1C0 !important;
+}
+
+.confian-text {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+
+.confian-logo {
+  height: 20px;
+  object-fit: contain;
+}
+
+.confian-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  margin-top: 1rem;
+}
+
+.confian-person {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.confian-name {
+  font-weight: 600;
+  color: #111827;
+  display: block;
+  font-size: 13px;
+}
+
+.confian-role {
+  font-weight: 400;
+  color: #9ca3af;
+  font-size: 0.6rem;
+  margin-top: 0.25rem;
+  display: block; 
+}
+
+@media (max-width: 1024px) {
+  .confian-grid {
+    grid-template-columns: 1fr;
+  }
+  .confian-tall {
+    height: auto;
+  }
+}
+
+body {
+  background: var(--bg-soft);
+}
+
+/* SECCION CLIENTES */
+.clients-section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.clients-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #01B1C0 ;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.clients-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+  animation: scrollClients 60s linear infinite;
+}
+
+
+/* LOGOS */
+.clients-track img {
+  width: 140px;        /* ancho fijo uniforme */
+  height: 80px;        /* alto fijo uniforme */
+  object-fit: contain; /* mantiene proporción */
+  display: block;
+}
+
+
+.clients-track img:hover {
+  transform: scale(1.08);
+}
+
+/* Animación infinita */
+@keyframes scrollClients {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== SLIDER SECTION ===== */
+
+.slider-section {
+  padding: 6rem 1.5rem;
+  background: #f9fafb;
+}
+
+.slider-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+}
+
+.slider-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #54c9d6;
+  margin: 0;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* TARJETAS */
+.slider-card {
+  flex: 0 0 280px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: translateY(-6px);
+}
+
+.slider-card img {
+  height: 140px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.slider-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.slider-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* BOTONES */
+.slider-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 20;
+}
+
+.slider-btn.prev {
+  left: -20px;
+}
+
+.slider-btn.next {
+  right: -20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .slider-btn {
+    display: none;
+  }
+
+  .slider-card {
+    flex: 0 0 85%;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .clients-track {
+    gap: 3rem;
+  }
+
+  .clients-track img {
+    height: 40px;
+  }
+}

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fast Expenses Report">
+    <meta property="og:description"
+        content="Gestiona y controla los gastos corporativos de tu empresa desde nuestra aplicación web y móvil.">
+    <meta property="og:url" content="https://www.fastexpensesreport.com/">
+    <meta property="og:image" content="https://www.fastexpensesreport.com/preview.jpg">
+
+    <!-- Opcional pero recomendado -->
+    <meta property="og:site_name" content="Fast Expenses Report">
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fast Expenses Report">
+    <meta name="twitter:description" content="Gestión inteligente de gastos corporativos.">
+    <meta name="twitter:image" content="https://www.fastexpensesreport.com/preview.jpg">
+
+    <title>Fast Expenses Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="Img/favicon.ico" type="image/x-icon" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XFZ2D5TJD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3XFZ2D5TJD');
+</script>
+
+<body class="font-sans text-gray-800">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="Img/logonuevo222.png" alt="Logo" class="logo-img">
+            <nav class="nav-links">
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacto">Contáctanos</a>
+            </nav>
+        </div>
+        <button class="btn-login"> <a href="https://login.fastexpensesreport.com" target="_blank">Iniciar
+                sesión</a></button>
+        <button class="hamburger" id="hamburger-btn">
+            <img src="Img/menuhamburguesa.png">
+
+        </button>
+    </header>
+    <div class="mobile-menu" id="mobile-menu"
+        style=" border: solid 1px #c3c3c3; max-width: 500px; position: absolute; right: 0; border-radius: 5px;">
+        <a href="#funcionalidades" style="font-weight: bold;">Funcionalidades</a>
+        <a href="#beneficios" style="font-weight: bold;">Beneficios</a>
+        <a href="#caracteristicas" style="font-weight: bold;">Características</a>
+        <a href="#faq" style=" font-weight: bold;">FAQ</a>
+        <a href="#contacto" style="font-weight: bold;">Contáctanos</a>
+
+    </div>
+    <!-- SECCION 2 - HERO  -->
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <p class="hero-subtitle">Más eficiencia, menos complicaciones</p>
+            <h2 class="hero-title" style="color: #f5f5f5; font-weight: bold;">
+                Transforma la gestión de gastos de tu empresa
+            </h2>
+            <p class="hero-description" style="color: white;">
+                Fast expenses automatiza procesos, reduce costos y se adapta a tu empresa para que
+                puedas enfocarte en lo importante:
+                <br>
+                <span class="highlight-text">Hacer crecer tu negocio</span>
+            </p>
+            <button class="btn-contact" style="background-color: #00695C; color:white">
+                ¡Contactate con nosotros!
+            </button>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="Img/Sectionhero.png" alt="Hero" class="hero-image">
+            <img src="Img/gasto1.png" alt="Gasto 1" class="hero-overlay gasto1">
+            <img src="Img/gasto2.png" alt="Gasto 2" class="hero-overlay gasto2">
+            <img src="Img/gasto3.png" alt="Gasto 3" class="hero-overlay gasto3">
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2 - CÓMO LO HACEMOS -->
+    <section class="features-section" id="funcionalidades"
+        class="stats-section my-12 px-6 py-16 px-6 lg:px-12 bg-gray-50">
+        <div class="features-wrapper">
+            <!-- Item 1 -->
+            <div class="feature-item" id="feature-1">
+                <img src="Img/carga1.png" class="feature-img" alt="Paso 1">
+                <div class="feature-text">
+                    <img src="Img/comolohacemos1.png" class="img-comolohacemos" alt="Icono">
+                    <h3 class="feature-title">Carga tus comprobantes</h3>
+                    <p class="feature-description">
+                        Sube tus facturas desde el celular, reenvia por correo o haz la carga desde tu computadora.
+                        Nuestro sistema digitalizara y extraera los datos automáticamente.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="feature-item" id="feature-2">
+                <img src="Img/gastos2.png" class="feature-img" alt="Paso 2">
+                <div class="feature-text">
+                    <img src="Img/comolohacemos1.png" class="img-comolohacemos" alt="Icono">
+                    <h3 class="feature-title">Visualizá tus gastos en tiempo real</h3>
+                    <p class="feature-description">
+                        Accedé a la pantalla de inicio y revisá los comprobantes procesados,
+                        consultá su estado y editalos si es necesario.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="feature-item" id="feature-3">
+                <img src="Img/tarjetas1.png" class="feature-img" alt="Paso 3">
+                <div class="feature-text">
+                    <img src="Img/comolohacemos1.png" class="img-comolohacemos" alt="Icono">
+                    <h3 class="feature-title">Automatizá tus gastos con tarjeta</h3>
+                    <p class="feature-description">
+                        Los consumos realizados con tarjetas de crédito se importan automáticamente a tu perfil,
+                        evitando duplicaciones y reduciendo la carga manual.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="feature-item" id="feature-4">
+                <img src="Img/rendiciones2.png" class="feature-img" alt="Paso 4">
+                <div class="feature-text">
+                    <img src="Img/comolohacemos1.png" class="img-comolohacemos" alt="Icono">
+                    <h3 class="feature-title">Enviá tu rendición</h3>
+                    <p class="feature-description">
+                        Una vez lista, enviá la rendición para su aprobación.
+                        Podés incluir imágenes, comentarios o solicitar adelantos si la política de tu empresa lo
+                        permite.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="features-dots">
+            <span class="dot" data-target="feature-1"></span>
+            <span class="dot" data-target="feature-2"></span>
+            <span class="dot" data-target="feature-3"></span>
+            <span class="dot" data-target="feature-4"></span>
+        </div>
+    </section>
+
+    <!-- SECCION 3 BENEFICIOS -->
+    <section class="stats-section my-12 px-6 py-16 px-6 lg:px-12 bg-gray-50" id="beneficios">
+        <div class="stats-container">
+            <div class="stat-item">
+                <p class="stat-number" data-target="100000">+0</p>
+                <p class="stat-text">De comprobantes procesados</p>
+            </div>
+
+            <div class="stat-item">
+                <p class="stat-number" data-target="2000">+0</p>
+                <p class="stat-text">Usuarios activos</p>
+            </div>
+
+            <div class="stat-item">
+                <p class="stat-number" data-target="200">+0</p>
+                <p class="stat-text">Empresas confían en nosotros</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-section">
+        <div class="clients-container">
+            <h2 class="clients-title"> Empresas que confían en nosotros</h2>
+
+            <div class="clients-slider">
+                <div class="clients-track">
+                    <img src="Img/Clientes/andina.png" alt="Cliente 1">
+                    <img src="Img/Clientes/assurant.png" alt="Cliente 2">
+                    <img src="Img/Clientes/bago.jpg" alt="Cliente 3">
+                    <img src="Img/Clientes/cbse.png" alt="Cliente 4">
+                    <img src="Img/Clientes/cepas.png" alt="Cliente 5">
+                    <img src="Img/Clientes/controlunion.png" alt="Cliente 5">
+                    <img src="Img/Clientes/greenpeace.png" alt="Cliente 5">
+                    <img src="Img/Clientes/grimoldi.png" alt="Cliente 5">
+                    <img src="Img/Clientes/gum.jpg" alt="Cliente 5">
+                    <img src="Img/Clientes/lavirginia.svg" alt="Cliente 5">
+                    <img src="Img/Clientes/murchison.jpg" alt="Cliente 5">
+                    <img src="Img/Clientes/olga.png" alt="Cliente 5">
+                    <img src="Img/Clientes/peñaflor.png" alt="Cliente 5">
+                    <img src="Img/Clientes/redsos.png" alt="Cliente 5">
+                    <img src="Img/Clientes/river.png" alt="Cliente 5">
+                    <img src="Img/Clientes/sika.svg" alt="Cliente 5">
+
+
+                    <!-- DUPLICADOS PARA LOOP INFINITO -->
+                    <img src="Img/Clientes/andina.png" alt="Cliente 1">
+                    <img src="Img/Clientes/assurant.png" alt="Cliente 2">
+                    <img src="Img/Clientes/bago.jpg" alt="Cliente 3">
+                    <img src="Img/Clientes/cbse.png" alt="Cliente 4">
+                    <img src="Img/Clientes/cepas.png" alt="Cliente 5">
+                    <img src="Img/Clientes/controlunion.png" alt="Cliente 5">
+                    <img src="Img/Clientes/greenpeace.png" alt="Cliente 5">
+                    <img src="Img/Clientes/grimoldi.png" alt="Cliente 5">
+                    <img src="Img/Clientes/gum.jpg" alt="Cliente 5">
+                    <img src="Img/Clientes/lavirginia.svg" alt="Cliente 5">
+                    <img src="Img/Clientes/murchison.jpg" alt="Cliente 5">
+                    <img src="Img/Clientes/olga.png" alt="Cliente 5">
+                    <img src="Img/Clientes/peñaflor.png" alt="Cliente 5">
+                    <img src="Img/Clientes/redsos.png" alt="Cliente 5">
+                    <img src="Img/Clientes/river.png" alt="Cliente 5">
+                    <img src="Img/Clientes/sika.svg" alt="Cliente 5">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION 4 - Confian en nosotros -->
+    <section class="elegirnos-section">
+        <div class="elegirnos-header">
+            <h1 style="color: #54c9d6;">Una forma más eficiente de gestionar los gastos corporativos</h1>
+            <h3>Nuestro servicio no solo digitaliza y automatiza procesos...</h3>
+        </div>
+        <div class="elegirnos-container">
+            <div class="bloques-izquierda">
+                <div class="bloque bloque-horizontal bloque1">
+                    <div class="texto">
+                        <h2>Ahorro de tiempo operativo</h2>
+                        <h5>Reducí tareas manuales y procesos repetitivos. Concentrá los esfuerzos del equipo en tareas
+                            estratégicas</h5>
+                    </div>
+                    <div class="imagen">
+                        <img src="Img/sec4Img1.png" alt="Ahorro">
+                    </div>
+                </div>
+                <div class="bloque bloque-horizontal bloque2">
+                    <div class="texto">
+                        <h2>Escalabilidad regional</h2>
+                        <h5>Ideal para empresas con operación en múltiples países. Procesá rendiciones en distintas
+                            monedas y ajustá los flujos según la estructura local.</h5>
+                    </div>
+                    <div class="imagen img2">
+                        <img src="Img/sec4Img2.png" alt="Escalabilidad">
+                    </div>
+                </div>
+            </div>
+            <div class="bloque bloque-vertical bloque3">
+                <div class="texto">
+                    <h2>Menores costos por errores y duplicados</h2>
+                    <h5>Evitá fraudes, gastos duplicados o fuera de política gracias al control automatizado y la
+                        verificación integrada.</h5>
+                </div>
+                <div class="imagen img3">
+                    <img src="Img/sec4Img3.png" alt="Menores costos">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION 5 - RENDICIONES -->
+    <section class="rendiciones-section py-16 px-6 lg:px-12 bg-gray-50" id="caracteristicas">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+
+            <div class="flex justify-center lg:justify-end">
+                <img src="Img/sec5celu.png" alt="Celular" class="h-[400px] md:h-[400px] lg:h-[600px] object-contain">
+            </div>
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" style="color: #54c9d6;">
+                    Rendiciones de gastos eficientes
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Fast Expenses Report ofrece un conjunto completo de funcionalidades diseñadas para simplificar,
+                    automatizar y asegurar el proceso de rendición de gastos en tu organización.
+                </p>
+                <div class="rendiciones-boxes">
+
+                    <div class="rendiciones-box">
+                        <div class="rendiciones-box-header">
+                            <img src="Img/sec51.png" alt="Icono 1" class="rendiciones-icon">
+                            <h3>Procesamiento automático</h3>
+                        </div>
+                        <p>
+                            Digitalizá tus tickets desde el celular, correo o carga manual. Toda la información se
+                            extrae y organiza automáticamente en tu perfil.
+                        </p>
+                    </div>
+                    <div class="rendiciones-box">
+                        <div class="rendiciones-box-header">
+                            <img src="Img/sec52.png" alt="Icono 2" class="rendiciones-icon" style="margin: initial !important;">
+                            <h3>Integración contable</h3>
+                        </div>
+                        <p>
+                            Las rendiciones aprobadas se exportan e integran automáticamente al sistema contable de tu
+                            empresa, listas para su liquidación.
+                        </p>
+                    </div>
+                    <div class="rendiciones-box">
+                        <div class="rendiciones-box-header">
+                            <img src="Img/sec53.png" alt="Icono 3" class="rendiciones-icon">
+                            <h3>Configuración personalizada</h3>
+                        </div>
+                        <p>
+                            Procesá gastos en diferentes monedas y adaptá la herramienta a las políticas internas de tu
+                            compañía.
+                        </p>
+                    </div>
+                    <div class="rendiciones-box">
+                        <div class="rendiciones-box-header">
+                            <img src="Img/sec54.png" alt="Icono 4" class="rendiciones-icon">
+                            <h3>Control y jerarquías de aprobación</h3>
+                        </div>
+                        <p>
+                            Definí flujos de validación por tipo de gasto, categoría o monto. Supervisá todo el proceso
+                            con distintos perfiles de usuario.
+                        </p>
+                    </div>
+
+                </div>
+    </section>
+    <!-- SECCION 6 - CONFIAN EN NOSOTROS -->
+    <!-- <section class="confian-section py-16 px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto text-start mb-12">
+            <h2 class="confian-title" style="color: #54c9d6;">Confían en nosotros</h2>
+            <p class="confian-subtitle">Fast Expenses Report genera experiencias memorables en cada uno de nuestros
+                clientes.</p>
+        </div>
+
+        <div class="confian-grid max-w-7xl mx-auto">
+            <div class="confian-left">
+                <div class="confian-top">
+                    <div class="confian-box">
+                        <p class="confian-text">
+                            "Gracias a Fast Expenses redujimos en un 70% el tiempo de carga de comprobantes."
+                        </p>
+                        <div class="confian-footer">
+                            <div style="display: block;">
+                                <span class="confian-name">Ana Torres</span>
+                                <span class="confian-role">CEO & Founder</span>
+                            </div>
+                            <img src="Img/sec6logo1.png" alt="Logo 1" class="confian-logo">
+                        </div>
+                    </div>
+
+                    <div class="confian-box">
+                        <p class="confian-text">
+                            "La integración con nuestro sistema contable fue inmediata y sin errores."
+                        </p>
+                        <div class="confian-footer">
+                            <div style="display: block;">
+                                <span class="confian-name">Ana Torres</span>
+                                <span class="confian-role">CEO & Founder</span>
+                            </div>
+                            <img src="Img/sec6logo1.png" alt="Logo 2" class="confian-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="confian-box confian-wide">
+                    <p class="confian-text">
+                        "Un sistema flexible que se adaptó perfectamente a las políticas de nuestra compañía
+                        multinacional."
+                    </p>
+                    <div class="confian-footer">
+                        <div style="display: block;">
+                            <span class="confian-name">Ana Torres</span>
+                            <span class="confian-role">CEO & Founder</span>
+                        </div>
+                        <img src="Img/sec6logo1.png" alt="Logo 3" class="confian-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="confian-box confian-tall">
+                <p class="confian-text" style="color: white">
+                    "Con Fast Expenses tenemos control absoluto sobre todos los gastos corporativos en tiempo real.
+                    Antes necesitábamos varios días para recopilar, validar y aprobar las rendiciones de gastos de cada
+                    área,
+                    lo que generaba retrasos y muchas veces errores costosos."
+                </p>
+                <div class="confian-footer">
+                    <div style="display: block;">
+                        <span class="confian-name" style="color: white !important; width: 150px !important;">Pedro
+                            Thompson</span>
+                        <span class="confian-role" style="color: white !important;">CEO & Founder</span>
+                    </div>
+                    <img src="Img/sec6logo3.png" alt="Logo 4" class="confian-logo">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- SECCION 7 - SLIDER -->
+   <section class="slider-section">
+  <div class="slider-header">
+    <h2>Nunca fue tan fácil rendir gastos de tu empresa</h2>
+  </div>
+
+  <div class="slider-wrapper">
+    <button class="slider-btn prev" id="slider-prev">&#10094;</button>
+
+    <div class="slider-container" id="slider-container">
+
+      <div class="slider-card">
+        <img src="Img/seccslider1.png" alt="">
+        <h3>Adelantos</h3>
+        <p>Subí tus comprobantes en segundos desde cualquier dispositivo.</p>
+      </div>
+
+      <div class="slider-card">
+        <img src="Img/seccslider2.png" alt="">
+        <h3>Horas adicionales</h3>
+        <p>Tu información se procesa y organiza automáticamente.</p>
+      </div>
+
+      <div class="slider-card">
+        <img src="Img/seccslider3.png" alt="">
+        <h3>Transporte urbano</h3>
+        <p>Seguimiento en tiempo real de todas tus rendiciones.</p>
+      </div>
+
+      <div class="slider-card">
+        <img src="Img/seccslider4.jpg" alt="">
+        <h3>Vuelos</h3>
+        <p>Definí flujos y aprobaciones según políticas de la empresa.</p>
+      </div>
+
+      <div class="slider-card">
+        <img src="Img/seccslider5.jpg" alt="">
+        <h3>Tarjetas de crédito</h3>
+        <p>Exportá los datos a tu sistema contable en un clic.</p>
+      </div>
+
+    </div>
+
+    <button class="slider-btn next" id="slider-next">&#10095;</button>
+  </div>
+</section>
+
+    <!-- SECCION 8 - PREGUNTAS FRECUENTES -->
+    <section class="faq-section py-16 px-6 lg:px-12 bg-gray-50" style="background-color: white;" id="faq">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <div>
+                <h2 class="text-6xl font-bold text-gray-900 mb-2" style="width: 100px; color: #54c9d6;">Preguntas
+                    frecuentes</h2>
+                <p class="text-gray-500 max-w-s" style="margin-top: 1rem; width: 400px;">
+                    Respondemos algunas de las consultas más comunes para ayudarte a tomar la mejor decisión para tu
+                    empresa.
+                </p>
+            </div>
+
+            <div class="faq-container space-y-4">
+
+                <!-- Pregunta 1-->
+                <div class="faq-item border-b border-gray-200 pb-4">
+                    <button
+                        class="faq-question w-full flex justify-between items-center text-left font-medium text-gray-800">
+                        <span class="flex items-center gap-3">
+                            <img src="Img/secpreguntas1.png" class="w-5 h-13" alt="icono" />
+                            <span>¿Ofrecen soporte técnico?</span>
+                        </span>
+                        <span class="faq-toggle text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-answer text-gray-500 mt-2 hidden">
+                        Contamos con soporte técnico online permanente, para resolver dudas o incidentes de forma rápida
+                        y efectiva.
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="faq-item border-b border-gray-200 pb-4">
+                    <button
+                        class="faq-question w-full flex justify-between items-center text-left font-medium text-gray-800">
+                        <span class="flex items-center gap-3">
+                            <img src="Img/secpreguntas2.png" class="w-5 h-13" alt="icono" />
+                            <span>¿Qué tipo de empresas pueden utilizar Fast Expenses Report?</span>
+                        </span>
+                        <span class="faq-toggle text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-answer text-gray-500 mt-2 hidden">
+                        Fast Expenses Report puede ser utilizado por cualquier empresa, sin importar su tamaño o sector.
+                    </div>
+                </div>
+                <!-- pregunta 3 -->
+                <div class="faq-item border-b border-gray-200 pb-4">
+                    <button
+                        class="faq-question w-full flex justify-between items-center text-left font-medium text-gray-800">
+                        <span class="flex items-center gap-3">
+                            <img src="Img/secpreguntas3.png" class="w-5 h-13" alt="icono" />
+                            <span>¿La plataforma se adapta a las necesidades de mi empresa?</span>
+                        </span>
+                        <span class="faq-toggle text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-answer text-gray-500 mt-2 hidden">
+                        Sí, la plataforma es flexible y se adapta a diferentes flujos de trabajo y políticas internas.
+                    </div>
+                </div>
+                <!-- Pregunta 4 -->
+                <div class="faq-item border-b border-gray-200 pb-4">
+                    <button
+                        class="faq-question w-full flex justify-between items-center text-left font-medium text-gray-800">
+                        <span class="flex items-center gap-3">
+                            <img src="Img/secpreguntas4.png" class="w-5 h-13" alt="icono" />
+                            <span>¿Puedo usar Fast Expenses Report desde mi celular?</span>
+                        </span>
+                        <span class="faq-toggle text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-answer text-gray-500 mt-2 hidden">
+                        Sí, podés acceder desde tu celular, computadora o tablet sin perder información.
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="faq-item border-b border-gray-200 pb-4">
+                    <button
+                        class="faq-question w-full flex justify-between items-center text-left font-medium text-gray-800">
+                        <span class="flex items-center gap-3">
+                            <img src="Img/secpreguntas5.png" class="w-5 h-13" alt="icono" />
+                            <span>¿Cumplen con normativas de protección de datos?</span>
+                        </span>
+                        <span class="faq-toggle text-xl font-bold">+</span>
+                    </button>
+                    <div class="faq-answer text-gray-500 mt-2 hidden">
+                        Sí, cumplimos con normativas internacionales de protección de datos como GDPR.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION FORMULARIO -->
+
+    <section class="faq-section py-16 px-6 lg:px-12 bg-gray-50" id="contacto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <div>
+                <h2 class="text-6xl font-bold text-gray-900 mb-2" style="width: 100px; color: #54c9d6;">Contactanos</h2>
+                <p class="text-gray-500 max-w-s" style="margin-top: 1rem; width: 400px;">
+                    Dejanos tus datos y en la brevedad un asesor se pondrá en contacto contigo
+                </p>
+            </div>
+
+            <div class="faq-container">
+
+                <iframe width='601px' height='560px'
+                    src='https://crm.zoho.com/crm/WebFormServeServlet?rid=ab243da2e69680d411b6315501627c9cf5ebcc6407ef92a663e96c388b46e96e51fcf3d16d91a66b991ce748ed75d0dfgid94ab5abbf40384908c2365b946e67305d185e4e69d3218e28cd5521baa3d7dfc'>
+                </iframe>
+                <div id="success-screen" class="hidden fixed inset-0 z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-700"></div>
+
+                    <div class="relative flex items-center justify-center h-full px-6">
+                        <div
+                            class="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl p-10 max-w-lg w-full text-center text-white animate-fadeIn">
+
+                            <!-- LOGO -->
+                            <img src="img/logonuevo222.png" alt="Logo Empresa" class="mx-auto w-28 mb-6 drop-shadow-lg">
+
+                            <h2 class="text-4xl font-bold mb-4">
+                                ¡Mensaje enviado!
+                            </h2>
+
+                            <p class="text-white/80 mb-8">
+                                Gracias por confiar en nosotros. Un asesor se pondrá en contacto contigo muy pronto.
+                            </p>
+
+                            <a href="#index.html"
+                                class="inline-block bg-white text-teal-700 font-semibold px-8 py-3 rounded-2xl shadow-lg hover:scale-105 hover:shadow-xl transition transform duration-300">
+                                Volver al inicio
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-gray-800 px-6 lg:px-12 py-12 mt-16">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top section -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="Img/logonuevo222.png" alt="Logo" class="h-12 w-auto" style="width: 210px; height: 125px;">
+                </div>
+                <!-- Links -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 w-full lg:w-auto text-sm">
+                    <!-- Acceso -->
+                    <div>
+                        <h3 class="font-bold mb-2">Acceso</h3>
+                        <a href="https://login.fastexpensesreport.com" target="_blank" class="hover:underline">
+                            Iniciar sesión
+                        </a>
+                    </div>
+                    <!-- Comunicate -->
+                    <div>
+                        <h3 class="font-bold mb-2">Comunicate con nosotros</h3>
+                        <div class="flex flex-col space-y-1">
+                            <span>soporte@caolix.com</span>
+                            <span>+54-11-5365-7533</span>
+                        </div>
+                    </div>
+
+                    <!-- Legales -->
+                    <div>
+                        <h3 class="font-bold mb-2">Legales</h3>
+                        <div class="flex flex-col space-y-1">
+                            <a href="#" class="hover:underline">Términos y condiciones</a>
+                            <a href="#" class="hover:underline">Políticas de privacidad</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-200 my-8"></div>
+
+            <!-- Bottom section -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 text-xs">
+                <!-- Left side -->
+                <div class="space-y-1">
+                    <p>Maipu 1210 - Piso 8, Ciudad Autónoma de Buenos Aires, Argentina</p>
+                    <p>Fast Expenses Report © 2025 Derechos reservados</p>
+                </div>
+
+                <!-- Right side: Socials -->
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.845c0-2.508 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 17 22 12z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-2.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.761 0 5-2.238 5-5V5c0-2.762-2.239-5-5-5zM7 20H4V9h3v11zM5.5 7.5C4.672 7.5 4 6.828 4 6s.672-1.5 1.5-1.5S7 5.172 7 6s-.672 1.5-1.5 1.5zM20 20h-3v-5.5c0-1.104-.896-2-2-2s-2 .896-2 2V20h-3V9h3v1.086C13.331 9.403 14.613 9 16 9c2.209 0 4 1.791 4 4V20z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Toggle menú hamburguesa
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (hamburgerBtn && mobileMenu) {
+            hamburgerBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("active");
+            });
+        }
+
+        // Animaciones hero
+        window.addEventListener("load", () => {
+            if (typeof gsap !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.fromTo(".gasto1",
+                    { x: -100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.5, ease: "power3.out", delay: 0.5 }
+                );
+
+                gsap.fromTo(".gasto2",
+                    { x: 100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.5, ease: "power3.out", delay: 1.2 }
+                );
+
+                gsap.fromTo(".gasto3",
+                    { x: -100, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.5, ease: "power3.out", delay: 1.9 }
+                );
+            }
+        });
+
+        /* SECCION 2 — COMO LO HACEMOS */
+        document.addEventListener("DOMContentLoaded", function () {
+            const features = document.querySelectorAll(".feature-item");
+            const section = document.querySelector(".features-section");
+            const dots = document.querySelectorAll(".dot");
+
+            function calcTotalScroll() {
+                return window.innerHeight * (features.length - 1);
+            }
+
+            function initDesktop() {
+                gsap.set(features, { autoAlpha: 0 });
+                gsap.set(features[0], { autoAlpha: 1 });
+
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".features-section",
+                        start: "top top",
+                        end: () => "+=" + calcTotalScroll() + "px",
+                        scrub: true,
+                        pin: true,
+                        anticipatePin: 1,
+                        onUpdate: (self) => {
+                            const index = Math.min(
+                                features.length - 1,
+                                Math.floor(self.progress * features.length)
+                            );
+                            dots.forEach((dot) => dot.classList.remove("active"));
+                            dots[index].classList.add("active");
+                        },
+                    },
+                });
+
+                features.forEach((feature, i) => {
+                    if (i !== 0) {
+                        tl.to(features[i - 1], { autoAlpha: 0, duration: 0.5 }, "+=0.5")
+                            .to(feature, { autoAlpha: 1, duration: 0.5 }, "<");
+                    }
+                });
+            }
+
+            function initMobile() {
+                // limpiar gsap en mobile
+                gsap.set(features, { clearProps: "all" });
+                dots.forEach((dot) => dot.classList.remove("active"));
+            }
+
+            function init() {
+                if (window.innerWidth >= 768) {
+                    initDesktop();
+                } else {
+                    initMobile();
+                }
+            }
+
+            init();
+            window.addEventListener("resize", () => {
+                ScrollTrigger.getAll().forEach((st) => st.kill());
+                gsap.globalTimeline.clear();
+                init();
+            });
+        });
+
+        /* SECCION 3 — CONTADORES */
+        (function setupStatsObserver() {
+            const statsSection = document.querySelector('.stats-container');
+            const counters = document.querySelectorAll('.stat-number');
+            if (!statsSection || !counters) return;
+
+            const observerStats = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statsSection.classList.add('show');
+                        startCounters();
+                        observerStats.unobserve(statsSection);
+                    }
+                });
+            }, { threshold: 0.05 });
+            observerStats.observe(statsSection);
+
+            function startCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let current = 0;
+                    const increment = Math.ceil(target / 100);
+
+                    const updateCounter = () => {
+                        if (current < target) {
+                            current += increment;
+                            if (current > target) current = target;
+                            counter.textContent = `+${current}`;
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = `+${target}`;
+                        }
+                    };
+
+                    updateCounter();
+                });
+            }
+        })();
+
+        (function setupSlider() {
+            const container = document.getElementById("slider-container");
+            const prevBtn = document.getElementById("slider-prev");
+            const nextBtn = document.getElementById("slider-next");
+
+            if (!container || !prevBtn || !nextBtn) return;
+
+            const scrollAmount = 320;
+            const intervalTime = 3000;
+            let autoPlay;
+
+            function scrollNext() {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+                    container.scrollTo({ left: 0, behavior: "smooth" });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                }
+            }
+
+            function startAutoPlay() {
+                autoPlay = setInterval(scrollNext, intervalTime);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlay);
+            }
+
+            nextBtn.addEventListener("click", () => {
+                scrollNext();
+                stopAutoPlay();
+                startAutoPlay();
+            });
+
+            prevBtn.addEventListener("click", () => {
+                container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+                stopAutoPlay();
+                startAutoPlay();
+            });
+
+            container.addEventListener("mouseenter", stopAutoPlay);
+            container.addEventListener("mouseleave", startAutoPlay);
+
+            startAutoPlay();
+        })();
+
+        //SECCION PREGUNTAS FRECUENTES
+        document.querySelectorAll(".faq-question").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const item = btn.parentElement;
+                const answer = item.querySelector(".faq-answer");
+                const toggle = item.querySelector(".faq-toggle");
+
+                document.querySelectorAll(".faq-answer").forEach((a) => {
+                    if (a !== answer) {
+                        a.classList.add("hidden");
+                    }
+                });
+                document.querySelectorAll(".faq-toggle").forEach((t) => {
+                    if (t !== toggle) t.textContent = "+";
+                });
+
+                answer.classList.toggle("hidden");
+                toggle.textContent = answer.classList.contains("hidden") ? "+" : "×";
+            });
+        });
+
+        (function detectZohoSubmit() {
+            const iframe = document.querySelector("iframe");
+            const successScreen = document.getElementById("success-screen");
+
+            if (!iframe || !successScreen) return;
+
+            let initialLoad = true;
+
+            iframe.addEventListener("load", function () {
+                if (initialLoad) {
+                    initialLoad = false;
+                    return; // Ignorar primera carga
+                }
+
+                // Segunda carga = probable envío del formulario
+                iframe.style.display = "none";
+                successScreen.classList.remove("hidden");
+
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "form_submit");
+                }
+            });
+        })();
+const container = document.getElementById("slider-container");
+const prev = document.getElementById("slider-prev");
+const next = document.getElementById("slider-next");
+
+const scrollAmount = 320;
+
+next.addEventListener("click", () => {
+  container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+});
+
+prev.addEventListener("click", () => {
+  container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+});
+    </script>
+
+</body>
+
+</html>
